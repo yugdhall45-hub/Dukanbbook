@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Future Technologies | AntiGravity</title>
+    <meta name="description"
+        content="Explore future anti-gravity technologies: flying vehicles, floating cities, warp propulsion, and advanced transportation systems." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+</head>
+
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <nav class="navbar" id="navbar">
+        <a href="../index.html" class="nav-logo"><span class="logo-icon">⬡</span><span class="logo-text">ANTI<span
+                    class="accent">GRAVITY</span></span></a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="gravity.html" class="nav-link">Gravity</a></li>
+            <li><a href="concepts.html" class="nav-link">Concepts</a></li>
+            <li><a href="future.html" class="nav-link active">Future Tech</a></li>
+            <li><a href="research.html" class="nav-link">Research</a></li>
+            <li><a href="contact.html" class="nav-link nav-cta">Join Us</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger"
+            aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+
+    <section class="page-hero">
+        <div class="page-hero-bg"
+            style="background: radial-gradient(ellipse at 50% 0%, rgba(236, 72, 153, 0.08) 0%, transparent 60%), radial-gradient(ellipse at 20% 100%, rgba(0, 212, 255, 0.07) 0%, transparent 50%);">
+        </div>
+        <div class="container page-hero-content">
+            <span class="section-tag">Chapter 03</span>
+            <h1>Future <span class="gradient-text">Technologies</span></h1>
+            <p class="lead">Imagine a world where gravity is a choice. These are the technologies that anti-gravity
+                would make possible.</p>
+        </div>
+    </section>
+
+    <!-- Horizon Meter -->
+    <section class="content-section" id="intro">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Feasibility</span>
+                <h2 class="section-title">The <span class="gradient-text">Technology Horizon</span></h2>
+                <p class="section-desc">Each technology sits at a different point on the feasibility spectrum — from
+                    near-future to distant possibility.</p>
+            </div>
+            <div class="horizon-scale reveal">
+                <div class="horizon-labels">
+                    <span>🔬 Research</span>
+                    <span>⚗️ Early Dev</span>
+                    <span>🛠️ Prototype</span>
+                    <span>🌍 Deployed</span>
+                    <span>🚀 Widespread</span>
+                </div>
+                <div class="horizon-bar-bg">
+                    <div class="horizon-bar-fill"></div>
+                </div>
+                <p style="text-align:center; color: var(--clr-text-500); font-size:0.82rem; margin-top:8px;">Hover over
+                    each technology card to see where it sits on this scale</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Cards -->
+    <section class="content-section dark-alt" id="technologies">
+        <div class="container">
+            <div class="tech-grid">
+
+                <div class="tech-card tech-card--large reveal" id="tech-vehicle">
+                    <div class="tech-card-inner">
+                        <div class="tech-emoji">🛸</div>
+                        <div class="tech-meta">
+                            <span class="tech-year">2060 – 2100</span>
+                            <span class="tech-feasibility" style="--feasibility: 15%">Research Phase</span>
+                        </div>
+                        <h3>Anti-Gravity Vehicles</h3>
+                        <p>Personal and commercial vehicles that hover above any surface without wheels or rotors, using
+                            localized gravity field manipulation. No roads needed, no friction, no noise.</p>
+                        <div class="tech-details">
+                            <h4>Potential Capabilities</h4>
+                            <ul>
+                                <li>Hover at any altitude without fuel combustion</li>
+                                <li>Near-instant acceleration without inertia effects</li>
+                                <li>Travel through dense urban environments without congestion</li>
+                                <li>Zero traffic accidents from road collisions</li>
+                            </ul>
+                        </div>
+                        <div class="tech-progress">
+                            <span>Feasibility</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%"></div>
+                            </div>
+                            <span>15%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-card tech-card--large reveal" id="tech-city">
+                    <div class="tech-card-inner">
+                        <div class="tech-emoji">🏙️</div>
+                        <div class="tech-meta">
+                            <span class="tech-year">2100+</span>
+                            <span class="tech-feasibility" style="--feasibility: 8%">Far Future</span>
+                        </div>
+                        <h3>Floating Cities</h3>
+                        <p>Entire urban habitats suspended in the atmosphere, on other planets, or in orbit — supported
+                            by anti-gravity platforms rather than land. The ultimate answer to overpopulation.</p>
+                        <div class="tech-details">
+                            <h4>Design Concepts</h4>
+                            <ul>
+                                <li>Multi-level floating arcologies housing millions</li>
+                                <li>Optimal climate and altitude selection</li>
+                                <li>Massive reduction in land use pressure</li>
+                                <li>New forms of city planning and architecture</li>
+                            </ul>
+                        </div>
+                        <div class="tech-progress">
+                            <span>Feasibility</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 8%"></div>
+                            </div>
+                            <span>8%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-card reveal" id="tech-launch">
+                    <div class="tech-card-inner">
+                        <div class="tech-emoji">🚀</div>
+                        <div class="tech-meta">
+                            <span class="tech-year">2040 – 2080</span>
+                            <span class="tech-feasibility" style="--feasibility: 25%">Early Research</span>
+                        </div>
+                        <h3>Gravity-Assisted Space Launch</h3>
+                        <p>Reducing gravitational pull on rockets during launch could dramatically cut fuel requirements
+                            and costs for reaching orbit.</p>
+                        <div class="tech-progress">
+                            <span>Feasibility</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 25%"></div>
+                            </div>
+                            <span>25%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-card reveal" id="tech-medical">
+                    <div class="tech-card-inner">
+                        <div class="tech-emoji">🏥</div>
+                        <div class="tech-meta">
+                            <span class="tech-year">2035 – 2060</span>
+                            <span class="tech-feasibility" style="--feasibility: 35%">Prototype Stage</span>
+                        </div>
+                        <h3>Medical Anti-Gravity</h3>
+                        <p>Precisely controlled micro-gravity fields for surgery, rehabilitation, and treating
+                            conditions worsened by gravitational compression.</p>
+                        <div class="tech-progress">
+                            <span>Feasibility</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 35%"></div>
+                            </div>
+                            <span>35%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-card reveal" id="tech-energy">
+                    <div class="tech-card-inner">
+                        <div class="tech-emoji">⚡</div>
+                        <div class="tech-meta">
+                            <span class="tech-year">2050 – 2100</span>
+                            <span class="tech-feasibility" style="--feasibility: 20%">Theoretical</span>
+                        </div>
+                        <h3>Gravitational Energy Harvesting</h3>
+                        <p>Extracting energy from gravitational field differentials or using controlled gravity cycles
+                            as a power source — potentially limitless clean energy.</p>
+                        <div class="tech-progress">
+                            <span>Feasibility</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 20%"></div>
+                            </div>
+                            <span>20%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-card reveal" id="tech-warp">
+                    <div class="tech-card-inner">
+                        <div class="tech-emoji">🌀</div>
+                        <div class="tech-meta">
+                            <span class="tech-year">2200+</span>
+                            <span class="tech-feasibility" style="--feasibility: 3%">Very Far Future</span>
+                        </div>
+                        <h3>Warp Drive Propulsion</h3>
+                        <p>Based on the Alcubierre metric — contracting space ahead of a vessel while expanding it
+                            behind, enabling effective FTL travel within GR.</p>
+                        <div class="tech-progress">
+                            <span>Feasibility</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 3%"></div>
+                            </div>
+                            <span>3%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-card reveal" id="tech-construction">
+                    <div class="tech-card-inner">
+                        <div class="tech-emoji">🏗️</div>
+                        <div class="tech-meta">
+                            <span class="tech-year">2045 – 2070</span>
+                            <span class="tech-feasibility" style="--feasibility: 30%">Near Future</span>
+                        </div>
+                        <h3>Anti-Gravity Construction</h3>
+                        <p>Lifting and placing enormous structural elements without cranes, enabling new architectural
+                            forms impossible under full gravity.</p>
+                        <div class="tech-progress">
+                            <span>Feasibility</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 30%"></div>
+                            </div>
+                            <span>30%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-card reveal" id="tech-transport">
+                    <div class="tech-card-inner">
+                        <div class="tech-emoji">🚄</div>
+                        <div class="tech-meta">
+                            <span class="tech-year">2030 – 2050</span>
+                            <span class="tech-feasibility" style="--feasibility: 45%">Active Dev</span>
+                        </div>
+                        <h3>Magnetic Levitation++ (MagLev+)</h3>
+                        <p>Advanced successors to today's magnetic trains — using electromagnetic and potentially
+                            gravitational fields for frictionless, ultra-fast ground transportation.</p>
+                        <div class="tech-progress">
+                            <span>Feasibility</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                            <span>45%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- World Impact Section -->
+    <section class="content-section" id="impact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Impact</span>
+                <h2 class="section-title">How Anti-Gravity Changes <span class="gradient-text">Everything</span></h2>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-item reveal" id="imp-1">
+                    <div class="impact-icon">🌱</div>
+                    <h4>Environment</h4>
+                    <p>Zero-emission levitation transport could eliminate ground vehicle pollution. Floating cities
+                        could restore natural land.</p>
+                </div>
+                <div class="impact-item reveal" id="imp-2">
+                    <div class="impact-icon">💼</div>
+                    <h4>Economy</h4>
+                    <p>Global shipping costs collapse when freight no longer battles gravity. New industries form around
+                        anti-gravity infrastructure.</p>
+                </div>
+                <div class="impact-item reveal" id="imp-3">
+                    <div class="impact-icon">🏛️</div>
+                    <h4>Architecture</h4>
+                    <p>Buildings freed from structural gravity constraints. Floating arches, inverted towers, and spiral
+                        megastructures become feasible.</p>
+                </div>
+                <div class="impact-item reveal" id="imp-4">
+                    <div class="impact-icon">🌏</div>
+                    <h4>Geopolitics</h4>
+                    <p>Nations with anti-gravity technology gain enormous strategic and economic advantages. A potential
+                        new space race unfolds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section cta-section">
+        <div class="container">
+            <div class="cta-card reveal">
+                <h2>Explore <span class="gradient-text">Current Research</span></h2>
+                <p>Who is working on these technologies right now? See the real science happening today.</p>
+                <a href="research.html" class="btn btn-primary" id="cta-research-btn">View Research →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo"><span class="logo-icon">⬡</span><span class="logo-text">ANTI<span
+                                class="accent">GRAVITY</span></span></div>
+                    <p>Exploring the frontiers of physics.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="gravity.html">Gravity</a></li>
+                        <li><a href="concepts.html">Concepts</a></li>
+                        <li><a href="future.html">Future Tech</a></li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 AntiGravity Initiative.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/particles.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

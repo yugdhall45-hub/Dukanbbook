@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DukanBook – Smart Business Tracker</title>
+    <meta name="description"
+        content="Track your sales, purchases, and profits easily. Made for small business owners, kirana stores, and traders." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- ===== AUTH OVERLAY ===== -->
+    <div id="auth-overlay" class="auth-overlay">
+        <div class="auth-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="auth-card">
+            <div class="auth-logo">
+                <div class="logo-icon">📒</div>
+                <h1>DukanBook</h1>
+                <p>Smart Business Tracker | स्मार्ट बिज़नेस ट्रैकर</p>
+            </div>
+
+            <!-- Login Form -->
+            <div id="login-form" class="auth-form active">
+                <h2>Welcome Back / <span class="hindi">वापसी पर स्वागत</span></h2>
+                <div class="form-group">
+                    <label>Email / ईमेल</label>
+                    <input type="email" id="login-email" placeholder="your@email.com" />
+                </div>
+                <div class="form-group">
+                    <label>Password / पासवर्ड</label>
+                    <input type="password" id="login-password" placeholder="••••••••" />
+                </div>
+                <div id="login-error" class="form-error"></div>
+                <button class="btn-primary btn-full" onclick="handleLogin()">Login / लॉगिन</button>
+                <p class="auth-switch">New user? <a href="#" onclick="showSignup()">Create Account / खाता बनाएं</a></p>
+                <div class="demo-note">
+                    <span>🎯 Demo:</span> demo@dukanbook.com / demo123
+                </div>
+            </div>
+
+            <!-- Signup Form -->
+            <div id="signup-form" class="auth-form">
+                <h2>Create Account / <span class="hindi">खाता बनाएं</span></h2>
+                <div class="form-group">
+                    <label>Business Name / दुकान का नाम</label>
+                    <input type="text" id="signup-name" placeholder="Ram General Store" />
+                </div>
+                <div class="form-group">
+                    <label>Email / ईमेल</label>
+                    <input type="email" id="signup-email" placeholder="your@email.com" />
+                </div>
+                <div class="form-group">
+                    <label>Password / पासवर्ड</label>
+                    <input type="password" id="signup-password" placeholder="Min 6 characters" />
+                </div>
+                <div id="signup-error" class="form-error"></div>
+                <button class="btn-primary btn-full" onclick="handleSignup()">Create Account / खाता बनाएं</button>
+                <p class="auth-switch">Already have account? <a href="#" onclick="showLogin()">Login / लॉगिन</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MAIN APP ===== -->
+    <div id="app" class="app hidden">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <span class="logo-emoji">📒</span>
+                    <div>
+                        <div class="logo-name">DukanBook</div>
+                        <div class="logo-sub" id="sidebar-business-name">My Store</div>
+                    </div>
+                </div>
+                <button class="sidebar-close" onclick="toggleSidebar()">✕</button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-page="dashboard" onclick="navigate('dashboard')">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-label">Dashboard <span class="hindi-small">/ डैशबोर्ड</span></span>
+                </a>
+                <a href="#" class="nav-item" data-page="sales" onclick="navigate('sales')">
+                    <span class="nav-icon">💰</span>
+                    <span class="nav-label">Add Sale <span class="hindi-small">/ बिक्री</span></span>
+                </a>
+                <a href="#" class="nav-item" data-page="purchases" onclick="navigate('purchases')">
+                    <span class="nav-icon">🛒</span>
+                    <span class="nav-label">Add Purchase <span class="hindi-small">/ खरीद</span></span>
+                </a>
+                <a href="#" class="nav-item" data-page="expenses" onclick="navigate('expenses')">
+                    <span class="nav-icon">💸</span>
+                    <span class="nav-label">Expenses <span class="hindi-small">/ खर्च</span></span>
+                </a>
+                <a href="#" class="nav-item" data-page="inventory" onclick="navigate('inventory')">
+                    <span class="nav-icon">📦</span>
+                    <span class="nav-label">Inventory <span class="hindi-small">/ स्टॉक</span></span>
+                </a>
+                <a href="#" class="nav-item" data-page="reports" onclick="navigate('reports')">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-label">Reports <span class="hindi-small">/ रिपोर्ट</span></span>
+                </a>
+                <a href="#" class="nav-item" data-page="settings" onclick="navigate('settings')">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-label">Settings <span class="hindi-small">/ सेटिंग</span></span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar" id="sidebar-avatar">?</div>
+                    <div>
+                        <div class="user-name" id="sidebar-user-name">User</div>
+                        <div class="user-email" id="sidebar-user-email"></div>
+                    </div>
+                </div>
+                <button class="btn-logout" onclick="handleLogout()">🚪 Logout</button>
+            </div>
+        </aside>
+
+        <!-- Overlay for mobile -->
+        <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="topbar">
+                <button class="hamburger" onclick="toggleSidebar()">☰</button>
+                <div class="topbar-title" id="topbar-title">Dashboard</div>
+                <div class="topbar-right">
+                    <span class="topbar-date" id="topbar-date"></span>
+                    <div class="topbar-user" id="topbar-user-avatar">?</div>
+                </div>
+            </header>
+
+            <!-- Pages -->
+            <div class="pages-container">
+                <div id="page-dashboard" class="page active"></div>
+                <div id="page-sales" class="page"></div>
+                <div id="page-purchases" class="page"></div>
+                <div id="page-expenses" class="page"></div>
+                <div id="page-inventory" class="page"></div>
+                <div id="page-reports" class="page"></div>
+                <div id="page-settings" class="page"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="js/db.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/sales.js"></script>
+    <script src="js/purchases.js"></script>
+    <script src="js/expenses.js"></script>
+    <script src="js/inventory.js"></script>
+    <script src="js/reports.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/app.js"></script>
+</body>

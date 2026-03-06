@@ -4,174 +4,336 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DukanBook – Smart Business Tracker</title>
+    <title>AntiGravity | Exploring the Future of Physics</title>
     <meta name="description"
-        content="Track your sales, purchases, and profits easily. Made for small business owners, kirana stores, and traders." />
+        content="Discover the science of gravity and the future of anti-gravity technology. Explore Newton's laws, Einstein's relativity, warp drives, and more." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/home.css" />
 </head>
 
 <body>
+    <!-- Particle Canvas -->
+    <canvas id="particle-canvas"></canvas>
 
-    <!-- ===== AUTH OVERLAY ===== -->
-    <div id="auth-overlay" class="auth-overlay">
-        <div class="auth-bg-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <span class="logo-icon">⬡</span>
+            <span class="logo-text">ANTI<span class="accent">GRAVITY</span></span>
         </div>
-        <div class="auth-card">
-            <div class="auth-logo">
-                <div class="logo-icon">📒</div>
-                <h1>DukanBook</h1>
-                <p>Smart Business Tracker | स्मार्ट बिज़नेस ट्रैकर</p>
-            </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="pages/gravity.html" class="nav-link">Gravity</a></li>
+            <li><a href="pages/concepts.html" class="nav-link">Concepts</a></li>
+            <li><a href="pages/future.html" class="nav-link">Future Tech</a></li>
+            <li><a href="pages/research.html" class="nav-link">Research</a></li>
+            <li><a href="pages/contact.html" class="nav-link nav-cta">Join Us</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
 
-            <!-- Login Form -->
-            <div id="login-form" class="auth-form active">
-                <h2>Welcome Back / <span class="hindi">वापसी पर स्वागत</span></h2>
-                <div class="form-group">
-                    <label>Email / ईमेल</label>
-                    <input type="email" id="login-email" placeholder="your@email.com" />
-                </div>
-                <div class="form-group">
-                    <label>Password / पासवर्ड</label>
-                    <input type="password" id="login-password" placeholder="••••••••" />
-                </div>
-                <div id="login-error" class="form-error"></div>
-                <button class="btn-primary btn-full" onclick="handleLogin()">Login / लॉगिन</button>
-                <p class="auth-switch">New user? <a href="#" onclick="showSignup()">Create Account / खाता बनाएं</a></p>
-                <div class="demo-note">
-                    <span>🎯 Demo:</span> demo@dukanbook.com / demo123
-                </div>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="nebula nebula-1"></div>
+            <div class="nebula nebula-2"></div>
+            <div class="nebula nebula-3"></div>
+        </div>
+        <div class="floating-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+            <div class="orb orb-4"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Future Physics Initiative
             </div>
-
-            <!-- Signup Form -->
-            <div id="signup-form" class="auth-form">
-                <h2>Create Account / <span class="hindi">खाता बनाएं</span></h2>
-                <div class="form-group">
-                    <label>Business Name / दुकान का नाम</label>
-                    <input type="text" id="signup-name" placeholder="Ram General Store" />
+            <h1 class="hero-title">
+                Exploring<br />
+                <span class="gradient-text">Anti-Gravity</span><br />
+                Technology
+            </h1>
+            <p class="hero-subtitle">
+                Where Newton's laws meet Einstein's curvature — and humanity dares to go beyond both.
+                Discover the science that could reshape civilization.
+            </p>
+            <div class="hero-actions">
+                <a href="pages/gravity.html" class="btn btn-primary" id="hero-explore-btn">
+                    <span>Begin Exploration</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="pages/concepts.html" class="btn btn-secondary" id="hero-concepts-btn">
+                    Anti-Gravity Concepts
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">4B+</span>
+                    <span class="stat-label">Years of Gravity</span>
                 </div>
-                <div class="form-group">
-                    <label>Email / ईमेल</label>
-                    <input type="email" id="signup-email" placeholder="your@email.com" />
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">100+</span>
+                    <span class="stat-label">Nations Researching</span>
                 </div>
-                <div class="form-group">
-                    <label>Password / पासवर्ड</label>
-                    <input type="password" id="signup-password" placeholder="Min 6 characters" />
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">∞</span>
+                    <span class="stat-label">Possibilities</span>
                 </div>
-                <div id="signup-error" class="form-error"></div>
-                <button class="btn-primary btn-full" onclick="handleSignup()">Create Account / खाता बनाएं</button>
-                <p class="auth-switch">Already have account? <a href="#" onclick="showLogin()">Login / लॉगिन</a></p>
             </div>
         </div>
-    </div>
+        <div class="hero-visual">
+            <div class="planet-system">
+                <div class="planet-ring"></div>
+                <div class="planet-ring ring-2"></div>
+                <div class="planet-core">
+                    <div class="planet-glow"></div>
+                    <div class="planet-surface"></div>
+                </div>
+                <div class="orbit orbit-1">
+                    <div class="satellite sat-1"></div>
+                </div>
+                <div class="orbit orbit-2">
+                    <div class="satellite sat-2"></div>
+                </div>
+                <div class="orbit orbit-3">
+                    <div class="satellite sat-3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
 
-    <!-- ===== MAIN APP ===== -->
-    <div id="app" class="app hidden">
+    <!-- Quick Overview Cards -->
+    <section class="overview-section" id="overview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Explore</span>
+                <h2 class="section-title">The Science of <span class="gradient-text">Tomorrow</span></h2>
+                <p class="section-desc">From classical mechanics to quantum gravity — we cover the full spectrum of
+                    gravitational science and its futuristic applications.</p>
+            </div>
+            <div class="cards-grid">
+                <a href="pages/gravity.html" class="overview-card" id="card-gravity">
+                    <div class="card-icon">⚛️</div>
+                    <div class="card-glow"></div>
+                    <h3>Understanding Gravity</h3>
+                    <p>Dive into Newton's universal gravitation and Einstein's spacetime curvature. The foundation of
+                        everything.</p>
+                    <span class="card-link">Explore →</span>
+                </a>
+                <a href="pages/concepts.html" class="overview-card" id="card-concepts">
+                    <div class="card-icon">🌌</div>
+                    <div class="card-glow"></div>
+                    <h3>Anti-Gravity Concepts</h3>
+                    <p>Negative mass, exotic matter, dark energy — the theoretical building blocks of anti-gravity
+                        technology.</p>
+                    <span class="card-link">Explore →</span>
+                </a>
+                <a href="pages/future.html" class="overview-card" id="card-future">
+                    <div class="card-icon">🚀</div>
+                    <div class="card-glow"></div>
+                    <h3>Future Technologies</h3>
+                    <p>Flying cities, warp drives, and anti-gravity vehicles. Imagine the world when gravity becomes
+                        optional.</p>
+                    <span class="card-link">Explore →</span>
+                </a>
+                <a href="pages/research.html" class="overview-card" id="card-research">
+                    <div class="card-icon">🔬</div>
+                    <div class="card-glow"></div>
+                    <h3>Active Research</h3>
+                    <p>NASA, CERN, and universities worldwide are probing the limits of gravity. Discover what's
+                        happening now.</p>
+                    <span class="card-link">Explore →</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
-        <!-- Sidebar -->
-        <aside class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <div class="sidebar-logo">
-                    <span class="logo-emoji">📒</span>
-                    <div>
-                        <div class="logo-name">DukanBook</div>
-                        <div class="logo-sub" id="sidebar-business-name">My Store</div>
+    <!-- Interactive Gravity Demo -->
+    <section class="demo-section" id="demo">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Interactive</span>
+                <h2 class="section-title">Gravity <span class="gradient-text">Simulator</span></h2>
+                <p class="section-desc">Click on the canvas to create gravity wells. Watch particles orbit and fall!</p>
+            </div>
+            <div class="simulator-wrapper">
+                <canvas id="gravity-sim" width="800" height="400"></canvas>
+                <div class="sim-controls">
+                    <button class="sim-btn" id="sim-reset">Reset</button>
+                    <button class="sim-btn" id="sim-add-planet">Add Planet</button>
+                    <button class="sim-btn active" id="sim-toggle">Running</button>
+                </div>
+                <p class="sim-hint">🖱️ Click canvas to add gravity wells • Drag to move them</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Facts -->
+    <section class="facts-section" id="facts">
+        <div class="container">
+            <div class="facts-grid">
+                <div class="fact-card" id="fact-1">
+                    <div class="fact-number">9.8</div>
+                    <div class="fact-unit">m/s²</div>
+                    <p>Earth's gravitational acceleration — the force shaping every structure we've ever built.</p>
+                </div>
+                <div class="fact-card" id="fact-2">
+                    <div class="fact-number">1915</div>
+                    <div class="fact-unit">Year</div>
+                    <p>Einstein published General Relativity — redefining gravity as the curvature of spacetime.</p>
+                </div>
+                <div class="fact-card" id="fact-3">
+                    <div class="fact-number">299,792</div>
+                    <div class="fact-unit">km/s</div>
+                    <p>Speed of light — the cosmic speed limit that warp drives would need to bypass.</p>
+                </div>
+                <div class="fact-card" id="fact-4">
+                    <div class="fact-number">68%</div>
+                    <div class="fact-unit">Universe</div>
+                    <p>Dark energy constitutes most of the cosmos — and may be key to anti-gravity technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">History & Future</span>
+                <h2 class="section-title">Gravity's <span class="gradient-text">Timeline</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item left" id="tl-1">
+                    <div class="timeline-card">
+                        <span class="tl-year">1687</span>
+                        <h4>Newton's Principia</h4>
+                        <p>Isaac Newton publishes his law of universal gravitation, defining gravity as a force.</p>
                     </div>
                 </div>
-                <button class="sidebar-close" onclick="toggleSidebar()">✕</button>
-            </div>
-
-            <nav class="sidebar-nav">
-                <a href="#" class="nav-item active" data-page="dashboard" onclick="navigate('dashboard')">
-                    <span class="nav-icon">🏠</span>
-                    <span class="nav-label">Dashboard <span class="hindi-small">/ डैशबोर्ड</span></span>
-                </a>
-                <a href="#" class="nav-item" data-page="sales" onclick="navigate('sales')">
-                    <span class="nav-icon">💰</span>
-                    <span class="nav-label">Add Sale <span class="hindi-small">/ बिक्री</span></span>
-                </a>
-                <a href="#" class="nav-item" data-page="purchases" onclick="navigate('purchases')">
-                    <span class="nav-icon">🛒</span>
-                    <span class="nav-label">Add Purchase <span class="hindi-small">/ खरीद</span></span>
-                </a>
-                <a href="#" class="nav-item" data-page="expenses" onclick="navigate('expenses')">
-                    <span class="nav-icon">💸</span>
-                    <span class="nav-label">Expenses <span class="hindi-small">/ खर्च</span></span>
-                </a>
-                <a href="#" class="nav-item" data-page="inventory" onclick="navigate('inventory')">
-                    <span class="nav-icon">📦</span>
-                    <span class="nav-label">Inventory <span class="hindi-small">/ स्टॉक</span></span>
-                </a>
-                <a href="#" class="nav-item" data-page="reports" onclick="navigate('reports')">
-                    <span class="nav-icon">📊</span>
-                    <span class="nav-label">Reports <span class="hindi-small">/ रिपोर्ट</span></span>
-                </a>
-                <a href="#" class="nav-item" data-page="settings" onclick="navigate('settings')">
-                    <span class="nav-icon">⚙️</span>
-                    <span class="nav-label">Settings <span class="hindi-small">/ सेटिंग</span></span>
-                </a>
-            </nav>
-
-            <div class="sidebar-footer">
-                <div class="user-info">
-                    <div class="user-avatar" id="sidebar-avatar">?</div>
-                    <div>
-                        <div class="user-name" id="sidebar-user-name">User</div>
-                        <div class="user-email" id="sidebar-user-email"></div>
+                <div class="timeline-item right" id="tl-2">
+                    <div class="timeline-card">
+                        <span class="tl-year">1915</span>
+                        <h4>General Relativity</h4>
+                        <p>Einstein revolutionizes physics by describing gravity as the curvature of spacetime.</p>
                     </div>
                 </div>
-                <button class="btn-logout" onclick="handleLogout()">🚪 Logout</button>
-            </div>
-        </aside>
-
-        <!-- Overlay for mobile -->
-        <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Top Bar -->
-            <header class="topbar">
-                <button class="hamburger" onclick="toggleSidebar()">☰</button>
-                <div class="topbar-title" id="topbar-title">Dashboard</div>
-                <div class="topbar-right">
-                    <span class="topbar-date" id="topbar-date"></span>
-                    <div class="topbar-user" id="topbar-user-avatar">?</div>
+                <div class="timeline-item left" id="tl-3">
+                    <div class="timeline-card">
+                        <span class="tl-year">1969</span>
+                        <h4>Moon Landing</h4>
+                        <p>Humans first experience a different gravitational environment — 1/6th of Earth's gravity.</p>
+                    </div>
                 </div>
-            </header>
-
-            <!-- Pages -->
-            <div class="pages-container">
-                <div id="page-dashboard" class="page active"></div>
-                <div id="page-sales" class="page"></div>
-                <div id="page-purchases" class="page"></div>
-                <div id="page-expenses" class="page"></div>
-                <div id="page-inventory" class="page"></div>
-                <div id="page-reports" class="page"></div>
-                <div id="page-settings" class="page"></div>
+                <div class="timeline-item right" id="tl-4">
+                    <div class="timeline-card">
+                        <span class="tl-year">1994</span>
+                        <h4>Alcubierre Drive</h4>
+                        <p>Miguel Alcubierre proposes the theoretical warp drive using exotic matter to bend space.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left" id="tl-5">
+                    <div class="timeline-card">
+                        <span class="tl-year">2016</span>
+                        <h4>Gravitational Waves</h4>
+                        <p>LIGO detects gravitational waves, opening a new window into the universe.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right future" id="tl-6">
+                    <div class="timeline-card">
+                        <span class="tl-year">2050+</span>
+                        <h4>Anti-Gravity Propulsion?</h4>
+                        <p>Researchers hope quantum gravity theories could unlock practical anti-gravity devices.</p>
+                    </div>
+                </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </section>
 
-    <!-- Toast Notification -->
-    <div id="toast" class="toast"></div>
+    <!-- Newsletter CTA -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-bg"></div>
+                <div class="newsletter-content">
+                    <span class="section-tag">Stay Updated</span>
+                    <h2>Join the <span class="gradient-text">Anti-Gravity</span> Community</h2>
+                    <p>Get the latest research, discoveries, and insights delivered straight to your inbox.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" id="email-input" placeholder="your@email.com" required />
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="js/db.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/dashboard.js"></script>
-    <script src="js/sales.js"></script>
-    <script src="js/purchases.js"></script>
-    <script src="js/expenses.js"></script>
-    <script src="js/inventory.js"></script>
-    <script src="js/reports.js"></script>
-    <script src="js/settings.js"></script>
-    <script src="js/app.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo">
+                        <span class="logo-icon">⬡</span>
+                        <span class="logo-text">ANTI<span class="accent">GRAVITY</span></span>
+                    </div>
+                    <p>Exploring the frontiers of physics and anti-gravity technology for a better tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="pages/gravity.html">What is Gravity?</a></li>
+                        <li><a href="pages/concepts.html">Anti-Gravity Concepts</a></li>
+                        <li><a href="pages/future.html">Future Technologies</a></li>
+                        <li><a href="pages/research.html">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="pages/contact.html">Contact Us</a></li>
+                        <li><a href="pages/contact.html#newsletter">Newsletter</a></li>
+                        <li><a href="pages/contact.html#ideas">Submit Ideas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow the Mission</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Twitter">𝕏</a>
+                        <a href="#" class="social-icon" aria-label="YouTube">▶</a>
+                        <a href="#" class="social-icon" aria-label="Discord">◈</a>
+                        <a href="#" class="social-icon" aria-label="GitHub">⌥</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 AntiGravity Initiative. Built for curious minds across the cosmos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/gravity-sim.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
+</html>

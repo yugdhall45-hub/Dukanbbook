@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research & Experiments | AntiGravity</title>
+    <meta name="description"
+        content="Discover current anti-gravity and quantum gravity research from NASA, CERN, ESA and universities worldwide." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+</head>
+
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <nav class="navbar" id="navbar">
+        <a href="../index.html" class="nav-logo"><span class="logo-icon">⬡</span><span class="logo-text">ANTI<span
+                    class="accent">GRAVITY</span></span></a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="gravity.html" class="nav-link">Gravity</a></li>
+            <li><a href="concepts.html" class="nav-link">Concepts</a></li>
+            <li><a href="future.html" class="nav-link">Future Tech</a></li>
+            <li><a href="research.html" class="nav-link active">Research</a></li>
+            <li><a href="contact.html" class="nav-link nav-cta">Join Us</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger"
+            aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="container page-hero-content">
+            <span class="section-tag">Chapter 04</span>
+            <h1>Research & <span class="gradient-text">Experiments</span></h1>
+            <p class="lead">From LIGO's ripples in spacetime to quantum levitation in university labs — the frontier of
+                gravitational science is alive and accelerating.</p>
+        </div>
+    </section>
+
+    <!-- Research Areas -->
+    <section class="content-section" id="areas">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Active Fields</span>
+                <h2 class="section-title">Current <span class="gradient-text">Research Areas</span></h2>
+                <p class="section-desc">These are the most active areas where physicists are pushing the boundaries of
+                    gravitational science.</p>
+            </div>
+            <div class="research-areas">
+                <div class="research-area reveal" id="ra-1">
+                    <div class="ra-number">01</div>
+                    <div class="ra-content">
+                        <h3>Gravitational Wave Astronomy</h3>
+                        <p>Following LIGO's 2016 detection of gravitational waves from merging black holes, a new field
+                            of astronomy was born. The LIGO-Virgo-KAGRA network now detects events regularly, giving us
+                            a fundamentally new way to observe the universe and test General Relativity in extreme
+                            conditions.</p>
+                        <div class="ra-tags">
+                            <span class="ra-tag">LIGO</span>
+                            <span class="ra-tag">Virgo</span>
+                            <span class="ra-tag">Black Holes</span>
+                            <span class="ra-tag">Neutron Stars</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-area reveal" id="ra-2">
+                    <div class="ra-number">02</div>
+                    <div class="ra-content">
+                        <h3>Quantum Levitation & Superconductors</h3>
+                        <p>Quantum levitation uses the Meissner effect — superconductors expel magnetic fields, causing
+                            them to "lock" in place above magnets. While this is electromagnetic rather than
+                            gravitational, researchers study it as a model for understanding how future gravitational
+                            manipulation might work. Real demonstrations of flour discs floating above magnetic tracks
+                            exist today.</p>
+                        <div class="ra-tags">
+                            <span class="ra-tag">Meissner Effect</span>
+                            <span class="ra-tag">Superconductors</span>
+                            <span class="ra-tag">Tel Aviv University</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-area reveal" id="ra-3">
+                    <div class="ra-number">03</div>
+                    <div class="ra-content">
+                        <h3>Dark Energy Surveys</h3>
+                        <p>The Dark Energy Survey (DES), Euclid space mission (ESA), and the Vera Rubin Observatory are
+                            mapping the universe's expansion with unprecedented precision to understand dark energy —
+                            the force accelerating universal expansion and potentially akin to cosmic anti-gravity.</p>
+                        <div class="ra-tags">
+                            <span class="ra-tag">ESA Euclid</span>
+                            <span class="ra-tag">Vera Rubin</span>
+                            <span class="ra-tag">Dark Energy Survey</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-area reveal" id="ra-4">
+                    <div class="ra-number">04</div>
+                    <div class="ra-content">
+                        <h3>NASA & Advanced Propulsion</h3>
+                        <p>NASA's Innovative Advanced Concepts (NIAC) program funds research into revolutionary
+                            propulsion, including theoretical concepts that manipulate spacetime. The "Helical Engine"
+                            and EmDrive experiments, while controversial, represent the kind of out-of-the-box thinking
+                            the field requires.</p>
+                        <div class="ra-tags">
+                            <span class="ra-tag">NASA NIAC</span>
+                            <span class="ra-tag">Advanced Propulsion</span>
+                            <span class="ra-tag">Helical Engine</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-area reveal" id="ra-5">
+                    <div class="ra-number">05</div>
+                    <div class="ra-content">
+                        <h3>Loop Quantum Gravity</h3>
+                        <p>Loop Quantum Gravity (LQG) is a competitor to String Theory for unifying General Relativity
+                            and Quantum Mechanics. LQG describes spacetime as a network of discrete loops — at the
+                            smallest scales, gravity is quantized. Understanding gravity quantally is essential for ever
+                            manipulating or engineering it.</p>
+                        <div class="ra-tags">
+                            <span class="ra-tag">LQG</span>
+                            <span class="ra-tag">Quantum Spacetime</span>
+                            <span class="ra-tag">Planck Scale</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-area reveal" id="ra-6">
+                    <div class="ra-number">06</div>
+                    <div class="ra-content">
+                        <h3>CERN & Antimatter Gravity</h3>
+                        <p>CERN's ALPHA experiment is testing something remarkable: does antimatter fall downward like
+                            ordinary matter, or does it fall upward? If antimatter has negative gravitational charge, it
+                            could point toward the existence of exotic matter and open new doors for anti-gravity
+                            physics.</p>
+                        <div class="ra-tags">
+                            <span class="ra-tag">CERN ALPHA</span>
+                            <span class="ra-tag">Antimatter</span>
+                            <span class="ra-tag">Gravitational Sign</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutions -->
+    <section class="content-section dark-alt" id="institutions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Organizations</span>
+                <h2 class="section-title">Global Research <span class="gradient-text">Institutions</span></h2>
+                <p class="section-desc">These organizations are at the forefront of gravitational and anti-gravity
+                    research worldwide.</p>
+            </div>
+            <div class="institutions-grid">
+                <div class="institution-card reveal" id="inst-1">
+                    <div class="inst-logo">🔭</div>
+                    <h4>NASA</h4>
+                    <p>Advanced propulsion, microgravity research on the ISS, and theoretical concepts through NIAC
+                        funding.</p>
+                    <span class="inst-country">🇺🇸 United States</span>
+                </div>
+                <div class="institution-card reveal" id="inst-2">
+                    <div class="inst-logo">⚛️</div>
+                    <h4>CERN</h4>
+                    <p>Antimatter gravity experiments, high-energy physics probing gravity's quantum nature.</p>
+                    <span class="inst-country">🇨🇭 Switzerland</span>
+                </div>
+                <div class="institution-card reveal" id="inst-3">
+                    <div class="inst-logo">🛸</div>
+                    <h4>ESA</h4>
+                    <p>Euclid dark energy mission, LISA gravitational wave observatory in space, MEG experiment.</p>
+                    <span class="inst-country">🇪🇺 Europe</span>
+                </div>
+                <div class="institution-card reveal" id="inst-4">
+                    <div class="inst-logo">🌊</div>
+                    <h4>LIGO / Caltech</h4>
+                    <p>Gravitational wave detection, testing GR in extreme regimes, opening gravitational-wave
+                        astronomy.</p>
+                    <span class="inst-country">🇺🇸 United States</span>
+                </div>
+                <div class="institution-card reveal" id="inst-5">
+                    <div class="inst-logo">🔬</div>
+                    <h4>MIT</h4>
+                    <p>Quantum gravity theory, String Theory research, advanced material science for exotic matter.</p>
+                    <span class="inst-country">🇺🇸 United States</span>
+                </div>
+                <div class="institution-card reveal" id="inst-6">
+                    <div class="inst-logo">🌌</div>
+                    <h4>ISRO</h4>
+                    <p>Space gravity experiments, satellite-based gravity mapping, mission planning to Moon and Mars.
+                    </p>
+                    <span class="inst-country">🇮🇳 India</span>
+                </div>
+                <div class="institution-card reveal" id="inst-7">
+                    <div class="inst-logo">🏫</div>
+                    <h4>Perimeter Institute</h4>
+                    <p>Leading theoretical physics research including LQG, quantum information and gravity interactions.
+                    </p>
+                    <span class="inst-country">🇨🇦 Canada</span>
+                </div>
+                <div class="institution-card reveal" id="inst-8">
+                    <div class="inst-logo">🧲</div>
+                    <h4>JAXA</h4>
+                    <p>Microgravity experiments, quantum levitation research, and advanced space propulsion studies.</p>
+                    <span class="inst-country">🇯🇵 Japan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quantum ideas -->
+    <section class="content-section" id="quantum">
+        <div class="container">
+            <div class="two-col">
+                <div class="col-text reveal-left">
+                    <span class="section-tag">Quantum Physics</span>
+                    <h2 class="section-title" style="text-align:left">Where Quantum Meets <span
+                            class="gradient-text">Gravity</span></h2>
+                    <p>The biggest challenge in modern physics is unifying quantum mechanics and general relativity. At
+                        quantum scales, spacetime itself may be granular rather than smooth — described by a "foam" of
+                        microscopic quantum fluctuations.</p>
+                    <p>These quantum gravity effects are unobservably small with current technology, but understanding
+                        them may reveal entirely new mechanisms for interacting with gravitational fields — the
+                        foundation of any future anti-gravity technology.</p>
+                    <div class="key-points">
+                        <div class="key-point" id="qkp-1">
+                            <span class="kp-icon">📐</span>
+                            <div><strong>Planck Length: 1.6 × 10⁻³⁵ m</strong>
+                                <p>The scale at which quantum gravity effects dominate — 20 orders of magnitude smaller
+                                    than an atomic nucleus.</p>
+                            </div>
+                        </div>
+                        <div class="key-point" id="qkp-2">
+                            <span class="kp-icon">🔗</span>
+                            <div><strong>Entanglement & Spacetime</strong>
+                                <p>New theories suggest quantum entanglement may be the building block of spacetime
+                                    geometry itself (ER=EPR conjecture).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-visual reveal-right">
+                    <div class="quantum-visual">
+                        <div class="qv-grid">
+                            <div class="qv-node" style="top:20%; left:30%"></div>
+                            <div class="qv-node" style="top:60%; left:20%"></div>
+                            <div class="qv-node" style="top:40%; left:65%"></div>
+                            <div class="qv-node" style="top:75%; left:55%"></div>
+                            <div class="qv-node" style="top:15%; left:70%"></div>
+                            <div class="qv-node" style="top:85%; left:35%"></div>
+                            <canvas id="quantum-canvas"
+                                style="position:absolute;inset:0;width:100%;height:100%;"></canvas>
+                        </div>
+                        <p class="diagram-label">Quantum Spacetime Foam Visualization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section cta-section">
+        <div class="container">
+            <div class="cta-card reveal">
+                <h2>Join the <span class="gradient-text">Research Community</span></h2>
+                <p>Stay connected with the latest discoveries and contribute your ideas.</p>
+                <a href="contact.html" class="btn btn-primary" id="cta-contact">Get Involved →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo"><span class="logo-icon">⬡</span><span class="logo-text">ANTI<span
+                                class="accent">GRAVITY</span></span></div>
+                    <p>Exploring the frontiers of physics and anti-gravity technology.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="gravity.html">Gravity</a></li>
+                        <li><a href="concepts.html">Concepts</a></li>
+                        <li><a href="future.html">Future Tech</a></li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 AntiGravity Initiative.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/particles.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // Quantum foam canvas animation
+        const qc = document.getElementById('quantum-canvas');
+        if (qc) {
+            const qctx = qc.getContext('2d');
+            const nodes = [];
+            function initQC() {
+                qc.width = qc.offsetWidth;
+                qc.height = qc.offsetHeight;
+                nodes.length = 0;
+                for (let i = 0; i < 20; i++) {
+                    nodes.push({ x: Math.random() * qc.width, y: Math.random() * qc.height, vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4 });
+                }
+            }
+            initQC();
+            window.addEventListener('resize', initQC);
+            function qLoop() {
+                qctx.clearRect(0, 0, qc.width, qc.height);
+                for (let n of nodes) {
+                    n.x += n.vx; n.y += n.vy;
+                    if (n.x < 0 || n.x > qc.width) n.vx *= -1;
+                    if (n.y < 0 || n.y > qc.height) n.vy *= -1;
+                    qctx.beginPath(); qctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
+                    qctx.fillStyle = 'rgba(0,212,255,0.6)'; qctx.fill();
+                }
+                for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
+                    const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
+                    if (d < 80) {
+                        qctx.beginPath(); qctx.moveTo(nodes[i].x, nodes[i].y); qctx.lineTo(nodes[j].x, nodes[j].y);
+                        qctx.strokeStyle = `rgba(0,212,255,${(1 - d / 80) * 0.3})`; qctx.lineWidth = 1; qctx.stroke();
+                    }
+                }
+                requestAnimationFrame(qLoop);
+            }
+            qLoop();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What is Gravity? | AntiGravity</title>
+    <meta name="description"
+        content="Learn about gravity — from Newton's universal law to Einstein's general relativity and how gravity shapes planets, light, and spacetime itself." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+</head>
+
+<body>
+    <canvas id="particle-canvas"></canvas>
+
+    <nav class="navbar" id="navbar">
+        <a href="../index.html" class="nav-logo">
+            <span class="logo-icon">⬡</span>
+            <span class="logo-text">ANTI<span class="accent">GRAVITY</span></span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="gravity.html" class="nav-link active">Gravity</a></li>
+            <li><a href="concepts.html" class="nav-link">Concepts</a></li>
+            <li><a href="future.html" class="nav-link">Future Tech</a></li>
+            <li><a href="research.html" class="nav-link">Research</a></li>
+            <li><a href="contact.html" class="nav-link nav-cta">Join Us</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="container page-hero-content">
+            <span class="section-tag">Chapter 01</span>
+            <h1>What is <span class="gradient-text">Gravity?</span></h1>
+            <p class="lead">From a falling apple to the bending of spacetime — gravity is the universe's most familiar
+                yet mysterious force.</p>
+        </div>
+    </section>
+
+    <!-- Newton Section -->
+    <section class="content-section" id="newton">
+        <div class="container">
+            <div class="two-col">
+                <div class="col-text reveal-left">
+                    <span class="section-tag">1687</span>
+                    <h2 class="section-title" style="text-align:left">Newton's Law of <span
+                            class="gradient-text">Gravitation</span></h2>
+                    <p>In 1687, Sir Isaac Newton published his <em>Principia Mathematica</em>, introducing the Law of
+                        Universal Gravitation: every particle of matter in the universe attracts every other particle
+                        with a force proportional to their masses and inversely proportional to the square of the
+                        distance between them.</p>
+
+                    <div class="formula-card">
+                        <div class="formula">F = G × (m₁ × m₂) / r²</div>
+                        <div class="formula-legend">
+                            <span><strong>F</strong> = gravitational force</span>
+                            <span><strong>G</strong> = gravitational constant (6.674×10⁻¹¹ N·m²/kg²)</span>
+                            <span><strong>m₁, m₂</strong> = masses of objects</span>
+                            <span><strong>r</strong> = distance between centers</span>
+                        </div>
+                    </div>
+
+                    <p>This equation explained why planets orbit the Sun, why the Moon orbits Earth, and why objects
+                        fall to the ground — all with remarkable precision. It dominated physics for over 200 years.</p>
+                </div>
+                <div class="col-visual reveal-right">
+                    <div class="newton-diagram">
+                        <div class="diagram-label">Gravitational Force Field</div>
+                        <canvas id="newton-canvas" width="360" height="320"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Einstein Section -->
+    <section class="content-section dark-alt" id="einstein">
+        <div class="container">
+            <div class="two-col reverse">
+                <div class="col-visual reveal-left">
+                    <div class="spacetime-diagram">
+                        <canvas id="spacetime-canvas" width="360" height="320"></canvas>
+                        <div class="diagram-label">Spacetime Curvature</div>
+                    </div>
+                </div>
+                <div class="col-text reveal-right">
+                    <span class="section-tag">1915</span>
+                    <h2 class="section-title" style="text-align:left">Einstein's General <span
+                            class="gradient-text">Relativity</span></h2>
+                    <p>In 1915, Albert Einstein revolutionized our understanding with General Relativity. Rather than a
+                        force, Einstein described gravity as the <strong>curvature of spacetime</strong> caused by mass
+                        and energy.</p>
+
+                    <div class="quote-block">
+                        <blockquote>"Spacetime tells matter how to move; matter tells spacetime how to curve."
+                        </blockquote>
+                        <cite>— John Archibald Wheeler</cite>
+                    </div>
+
+                    <p>Imagine a stretched rubber sheet. Place a heavy ball on it and it creates a well — other balls
+                        roll toward it. That well is gravity. Massive objects like stars and black holes warp the fabric
+                        of spacetime, and objects follow the curved paths — what we perceive as being "pulled."</p>
+
+                    <div class="key-points">
+                        <div class="key-point" id="kp-1">
+                            <span class="kp-icon">🌀</span>
+                            <div>
+                                <strong>Gravitational Time Dilation</strong>
+                                <p>Time passes slower in stronger gravitational fields — verified by GPS satellites.</p>
+                            </div>
+                        </div>
+                        <div class="key-point" id="kp-2">
+                            <span class="kp-icon">💡</span>
+                            <div>
+                                <strong>Light Bending</strong>
+                                <p>Light follows curved spacetime. During a 1919 eclipse, Eddington confirmed this.</p>
+                            </div>
+                        </div>
+                        <div class="key-point" id="kp-3">
+                            <span class="kp-icon">🌊</span>
+                            <div>
+                                <strong>Gravitational Waves</strong>
+                                <p>Ripples in spacetime from massive events — detected by LIGO in 2016.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Gravity Works Section -->
+    <section class="content-section" id="effects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Effects</span>
+                <h2 class="section-title">How Gravity <span class="gradient-text">Shapes Everything</span></h2>
+                <p class="section-desc">From atoms to galaxy clusters, gravity is the architect of cosmic structure.</p>
+            </div>
+
+            <div class="effects-grid">
+                <div class="effect-card reveal" id="eff-1">
+                    <div class="effect-icon">🌍</div>
+                    <h3>Planetary Formation</h3>
+                    <p>Gravity pulls gas and dust together, forming planetesimals that collide and grow into planets
+                        over millions of years. Without gravity, worlds simply wouldn't exist.</p>
+                </div>
+                <div class="effect-card reveal" id="eff-2">
+                    <div class="effect-icon">🌙</div>
+                    <h3>Tidal Forces</h3>
+                    <p>The Moon's gravity creates Earth's ocean tides by pulling differently on near and far sides.
+                        These tidal forces also drive geological activity on Jupiter's moon Io.</p>
+                </div>
+                <div class="effect-card reveal" id="eff-3">
+                    <div class="effect-icon">⚫</div>
+                    <h3>Black Holes</h3>
+                    <p>When a massive star collapses, gravity becomes so extreme that even light cannot escape. The
+                        boundary of no return is called the event horizon.</p>
+                </div>
+                <div class="effect-card reveal" id="eff-4">
+                    <div class="effect-icon">✨</div>
+                    <h3>Stellar Fusion</h3>
+                    <p>Stars exist because gravity compresses hydrogen gas until it ignites nuclear fusion, releasing
+                        the light and heat that powers all life on Earth.</p>
+                </div>
+                <div class="effect-card reveal" id="eff-5">
+                    <div class="effect-icon">🌌</div>
+                    <h3>Galaxy Structure</h3>
+                    <p>Galaxies are vast gravitational systems — hundreds of billions of stars bound together. Even dark
+                        matter influences galactic rotation through its gravity.</p>
+                </div>
+                <div class="effect-card reveal" id="eff-6">
+                    <div class="effect-icon">🔭</div>
+                    <h3>Gravitational Lensing</h3>
+                    <p>Massive objects bend light from distant sources, acting as natural telescopes. Astronomers use
+                        this effect to detect planets and dark matter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="content-section dark-alt" id="comparison">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Comparison</span>
+                <h2 class="section-title">Newton vs <span class="gradient-text">Einstein</span></h2>
+            </div>
+            <div class="comparison-table-wrap reveal">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Newton's Gravity</th>
+                            <th>Einstein's Gravity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nature</td>
+                            <td>Invisible force between masses</td>
+                            <td>Curvature of spacetime</td>
+                        </tr>
+                        <tr>
+                            <td>Speed of Propagation</td>
+                            <td>Instantaneous (Newton's assumption)</td>
+                            <td>Speed of light</td>
+                        </tr>
+                        <tr>
+                            <td>Affects Light?</td>
+                            <td>No (Newton's original theory)</td>
+                            <td>Yes — light follows curved spacetime</td>
+                        </tr>
+                        <tr>
+                            <td>Time</td>
+                            <td>Absolute and universal</td>
+                            <td>Relative — slows in gravity</td>
+                        </tr>
+                        <tr>
+                            <td>Black Holes</td>
+                            <td>Not predicted</td>
+                            <td>Naturally predicted</td>
+                        </tr>
+                        <tr>
+                            <td>GPS Accuracy</td>
+                            <td>Requires relativistic corrections</td>
+                            <td>Accounts for time dilation</td>
+                        </tr>
+                        <tr>
+                            <td>Validated By</td>
+                            <td>Planetary motion, tides</td>
+                            <td>Gravitational waves, light bending, GPS</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="content-section cta-section">
+        <div class="container">
+            <div class="cta-card reveal">
+                <h2>Ready to explore <span class="gradient-text">Anti-Gravity?</span></h2>
+                <p>Now that you understand gravity, discover what it might mean to overcome it.</p>
+                <a href="concepts.html" class="btn btn-primary" id="cta-concepts">
+                    Anti-Gravity Concepts
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo">
+                        <span class="logo-icon">⬡</span>
+                        <span class="logo-text">ANTI<span class="accent">GRAVITY</span></span>
+                    </div>
+                    <p>Exploring the frontiers of physics and anti-gravity technology.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="gravity.html">What is Gravity?</a></li>
+                        <li><a href="concepts.html">Anti-Gravity Concepts</a></li>
+                        <li><a href="future.html">Future Technologies</a></li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html#newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 AntiGravity Initiative. Built for curious minds across the cosmos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/particles.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/diagrams.js"></script>
+</body>
+
+</html>

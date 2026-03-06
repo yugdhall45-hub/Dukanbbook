@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anti-Gravity Concepts | AntiGravity</title>
+    <meta name="description"
+        content="Explore anti-gravity theories: negative mass, exotic matter, dark energy, and warp drive concepts from the frontiers of theoretical physics." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+</head>
+
+<body>
+    <canvas id="particle-canvas"></canvas>
+
+    <nav class="navbar" id="navbar">
+        <a href="../index.html" class="nav-logo">
+            <span class="logo-icon">⬡</span>
+            <span class="logo-text">ANTI<span class="accent">GRAVITY</span></span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="gravity.html" class="nav-link">Gravity</a></li>
+            <li><a href="concepts.html" class="nav-link active">Concepts</a></li>
+            <li><a href="future.html" class="nav-link">Future Tech</a></li>
+            <li><a href="research.html" class="nav-link">Research</a></li>
+            <li><a href="contact.html" class="nav-link nav-cta">Join Us</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <section class="page-hero">
+        <div class="page-hero-bg"
+            style="background: radial-gradient(ellipse at 50% 0%, rgba(124, 58, 237, 0.1) 0%, transparent 60%), radial-gradient(ellipse at 80% 100%, rgba(168, 85, 247, 0.07) 0%, transparent 50%);">
+        </div>
+        <div class="container page-hero-content">
+            <span class="section-tag">Chapter 02</span>
+            <h1>Anti-Gravity <span class="gradient-text">Concepts</span></h1>
+            <p class="lead">What does it truly mean to overcome gravity? Explore the theoretical — and potentially
+                achievable — ideas that could reshape civilization.</p>
+        </div>
+    </section>
+
+    <!-- Zero-G vs Anti-Gravity -->
+    <section class="content-section" id="difference">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Clarification</span>
+                <h2 class="section-title">Zero Gravity vs <span class="gradient-text">Anti-Gravity</span></h2>
+                <p class="section-desc">These terms are often confused, but they represent very different physical
+                    phenomena.</p>
+            </div>
+            <div class="vs-cards reveal">
+                <div class="vs-card vs-a">
+                    <div class="vs-icon">🌍</div>
+                    <h3>Zero Gravity</h3>
+                    <p>Not the absence of gravity — rather, a <strong>state of freefall</strong> where all objects fall
+                        at the same rate. Astronauts in orbit aren't free from gravity; Earth's gravity still acts on
+                        them. They're simply falling around the Earth continuously.</p>
+                    <ul class="vs-list">
+                        <li>✦ Gravity still present</li>
+                        <li>✦ Objects in continuous freefall</li>
+                        <li>✦ Achieved through orbital mechanics</li>
+                        <li>✦ Currently achievable</li>
+                    </ul>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="vs-card vs-b">
+                    <div class="vs-icon">🚀</div>
+                    <h3>Anti-Gravity</h3>
+                    <p>The theoretical ability to <strong>cancel, neutralize, or reverse</strong> the gravitational
+                        field itself. True anti-gravity would mean an object is no longer attracted to mass — not that
+                        it's simply in freefall.</p>
+                    <ul class="vs-list">
+                        <li>✦ Gravity actually negated</li>
+                        <li>✦ Could work at any location</li>
+                        <li>✦ Requires new physics</li>
+                        <li>✦ Currently theoretical</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theories Grid -->
+    <section class="content-section dark-alt" id="theories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Theory</span>
+                <h2 class="section-title">Theoretical <span class="gradient-text">Frameworks</span></h2>
+                <p class="section-desc">Physicists have proposed several theoretical pathways to achieving anti-gravity
+                    effects.</p>
+            </div>
+
+            <div class="theory-cards">
+                <div class="theory-card reveal" id="tc-1">
+                    <div class="theory-num">01</div>
+                    <div class="theory-content">
+                        <div class="theory-header">
+                            <span class="theory-icon">⊖</span>
+                            <h3>Negative Mass</h3>
+                            <span class="theory-badge theory-badge--speculative">Speculative</span>
+                        </div>
+                        <p>In standard physics, all mass is positive. But theoretical physics allows for the possibility
+                            of <strong>negative mass</strong> — matter that would be repelled by gravity rather than
+                            attracted. If negative mass exists, placing it beneath an object could create a lift force.
+                        </p>
+                        <p>A fascinating consequence of negative mass: if you pushed negative mass away, it would
+                            accelerate toward you — creating a "runaway" propulsion system with no energy input required
+                            (which violates thermodynamics as we know it).</p>
+                        <div class="theory-status">
+                            <span class="status-dot status-red"></span>
+                            <span>No experimental evidence found yet</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="theory-card reveal" id="tc-2">
+                    <div class="theory-num">02</div>
+                    <div class="theory-content">
+                        <div class="theory-header">
+                            <span class="theory-icon">💠</span>
+                            <h3>Exotic Matter</h3>
+                            <span class="theory-badge theory-badge--theoretical">Theoretical</span>
+                        </div>
+                        <p>Exotic matter is a class of hypothetical particles with unusual properties — including
+                            negative energy density or negative pressure. Unlike negative mass, exotic matter may be
+                            more compatible with General Relativity.</p>
+                        <p>The Casimir effect, where quantum fluctuations create a tiny attraction between metal plates,
+                            may hint at exotic vacuum energy effects — but scaling this to usable exotic matter remains
+                            speculative.</p>
+                        <div class="theory-status">
+                            <span class="status-dot status-yellow"></span>
+                            <span>Casimir effect hints at quantum vacuum energy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="theory-card reveal" id="tc-3">
+                    <div class="theory-num">03</div>
+                    <div class="theory-content">
+                        <div class="theory-header">
+                            <span class="theory-icon">🌑</span>
+                            <h3>Dark Energy</h3>
+                            <span class="theory-badge theory-badge--observed">Observed</span>
+                        </div>
+                        <p><strong>Dark energy</strong> constitutes approximately 68% of the universe's total energy.
+                            It's responsible for the accelerating expansion of the universe — the very force pushing
+                            galaxies apart faster than gravity can pull them together.</p>
+                        <p>In essence, dark energy acts like an anti-gravitational force at cosmic scales. If we could
+                            understand and harness its mechanism, it might be the key to engineering anti-gravity
+                            devices.</p>
+                        <div class="theory-status">
+                            <span class="status-dot status-green"></span>
+                            <span>Observed — causes universe's accelerating expansion</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="theory-card reveal" id="tc-4">
+                    <div class="theory-num">04</div>
+                    <div class="theory-content">
+                        <div class="theory-header">
+                            <span class="theory-icon">🌀</span>
+                            <h3>Alcubierre Warp Drive</h3>
+                            <span class="theory-badge theory-badge--theoretical">Theoretical</span>
+                        </div>
+                        <p>In 1994, physicist Miguel Alcubierre proposed a solution to Einstein's field equations that
+                            would allow faster-than-light travel: the <strong>warp bubble</strong>. By contracting space
+                            in front of a ship and expanding it behind, the ship itself never exceeds light speed —
+                            space moves instead.</p>
+                        <p>This is technically a form of anti-gravity: using spacetime geometry manipulation to bypass
+                            gravitational constraints on motion. The challenge is the enormous amount of exotic matter
+                            with negative energy density required.</p>
+                        <div class="theory-status">
+                            <span class="status-dot status-yellow"></span>
+                            <span>Mathematically valid; requires exotic matter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="theory-card reveal" id="tc-5">
+                    <div class="theory-num">05</div>
+                    <div class="theory-content">
+                        <div class="theory-header">
+                            <span class="theory-icon">🔮</span>
+                            <h3>Gravitoelectromagnetism</h3>
+                            <span class="theory-badge theory-badge--research">Research</span>
+                        </div>
+                        <p>General Relativity predicts that moving mass creates effects analogous to magnetism in
+                            electromagnetism. Rotating masses create a "gravitomagnetic" field that can exert forces on
+                            nearby masses.</p>
+                        <p>If we could create rapidly rotating superconductors or dense mass distributions, we might
+                            generate gravitomagnetic fields strong enough to produce measurable anti-gravity effects.
+                            This is actually being studied in laboratory settings.</p>
+                        <div class="theory-status">
+                            <span class="status-dot status-blue"></span>
+                            <span>Active laboratory research ongoing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="theory-card reveal" id="tc-6">
+                    <div class="theory-num">06</div>
+                    <div class="theory-content">
+                        <div class="theory-header">
+                            <span class="theory-icon">⚡</span>
+                            <h3>Quantum Gravity</h3>
+                            <span class="theory-badge theory-badge--research">Frontier</span>
+                        </div>
+                        <p>Our two greatest theories — General Relativity and Quantum Mechanics — are fundamentally
+                            incompatible at the smallest scales. <strong>Quantum Gravity</strong> is the elusive unified
+                            theory that would reconcile them.</p>
+                        <p>Theories like String Theory and Loop Quantum Gravity predict new phenomena at Planck scales
+                            that could include gravitic repulsion, extra dimensions, or mechanisms to engineer
+                            gravitational fields — potentially enabling true anti-gravity.</p>
+                        <div class="theory-status">
+                            <span class="status-dot status-blue"></span>
+                            <span>Active theoretical research — no experimental validation yet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="content-section cta-section">
+        <div class="container">
+            <div class="cta-card reveal">
+                <h2>See the <span class="gradient-text">Future Applications</span></h2>
+                <p>What would the world look like if anti-gravity became a reality? Explore the technologies it could
+                    unlock.</p>
+                <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                    <a href="future.html" class="btn btn-primary" id="cta-future">Future Technologies →</a>
+                    <a href="research.html" class="btn btn-secondary" id="cta-research">Current Research</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo"><span class="logo-icon">⬡</span><span class="logo-text">ANTI<span
+                                class="accent">GRAVITY</span></span></div>
+                    <p>Exploring the frontiers of physics and anti-gravity technology.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="gravity.html">What is Gravity?</a></li>
+                        <li><a href="concepts.html">Anti-Gravity Concepts</a></li>
+                        <li><a href="future.html">Future Technologies</a></li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 AntiGravity Initiative. Built for curious minds across the cosmos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/particles.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
