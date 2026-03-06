@@ -1,0 +1,21 @@
+# JARVIS AI Assistant - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Core voice ────────────────────────────────
+SpeechRecognition==3.10.4
+pyttsx3==2.90
+PyAudio==0.2.14          # Required by SpeechRecognition for microphone access
+
+# ── AI Brain ──────────────────────────────────
+anthropic>=0.25.0
+
+# ── Web / Data ────────────────────────────────
+requests==2.31.0
+wikipedia==1.4.0
+
+# ── Environment ───────────────────────────────
+python-dotenv==1.0.0
+
+# ── Optional: Volume control (Windows) ────────
+# pycaw==20230407
+# comtypes==1.4.1
